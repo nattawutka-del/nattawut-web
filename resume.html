@@ -1,1250 +1,776 @@
-```html
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nattawut Khammuk | เว็บไซต์ประวัติส่วนตัว</title>
+    <title>ณัฐวุฒิ คำมุข | Resume</title>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+<!-- ================= NAVBAR ================= -->
 
-    <header class="navbar">
+<header class="navbar">
 
-        <div class="container nav-container">
+    <div class="container nav-container">
 
-            <a href="#home" class="logo">
-                NK
-            </a>
+        <a href="#home" class="logo">
+            <span>N</span>K
+        </a>
 
-            <nav class="nav-menu" id="navMenu">
+        <nav id="navMenu">
 
-                <a href="#home" class="nav-link active">
-                    หน้าแรก
-                </a>
+            <a href="#home" class="nav-link active">หน้าแรก</a>
+            <a href="#about" class="nav-link">เกี่ยวกับฉัน</a>
+            <a href="#education" class="nav-link">การศึกษา</a>
+            <a href="#skills" class="nav-link">ทักษะ</a>
+            <a href="#projects" class="nav-link">ผลงาน</a>
+            <a href="#contact" class="nav-link">ติดต่อ</a>
 
-                <a href="#about" class="nav-link">
-                    เกี่ยวกับฉัน
-                </a>
+        </nav>
 
-                <a href="#education" class="nav-link">
-                    การศึกษา
-                </a>
+        <div class="nav-buttons">
 
-                <a href="#skills" class="nav-link">
-                    ทักษะ
-                </a>
+            <button id="themeBtn" class="icon-btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
 
-                <a href="#projects" class="nav-link">
-                    ผลงาน
-                </a>
-
-                <a href="#experience" class="nav-link">
-                    ประสบการณ์
-                </a>
-
-                <a href="#contact" class="nav-link">
-                    ติดต่อ
-                </a>
-
-            </nav>
-
-            <div class="nav-actions">
-
-                <button class="theme-btn" id="themeBtn">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-
-                <button class="menu-btn" id="menuBtn">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-
-            </div>
+            <button id="menuBtn" class="icon-btn menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
         </div>
 
-    </header>
+    </div>
 
+</header>
 
-    <!-- ================= HERO ================= -->
 
-    <main>
+<!-- ================= HERO ================= -->
 
-        <section class="hero section" id="home">
+<section id="home" class="hero">
 
-            <div class="container hero-container">
+    <div class="container hero-container">
 
-                <div class="hero-content">
+        <div class="hero-text">
 
-                    <p class="hero-small">
-
-                        <span></span>
-
-                        สวัสดีครับ ผม
-
-                    </p>
-
-                    <h1>
-
-                        ณัฐวุฒิ<br>
-
-                        <span>คำมุข</span>
-
-                    </h1>
-
-                    <h2>
-                        นักพัฒนาเว็บไซต์
-                    </h2>
-
-                    <p class="hero-description">
-
-                        ผมสนใจการพัฒนาเว็บไซต์ เทคโนโลยี
-                        และการสร้างระบบที่ทันสมัย ใช้งานง่าย
-                        และตอบโจทย์ผู้ใช้งาน
-
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="#projects" class="btn btn-primary">
-
-                            ดูผลงานของฉัน
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-                        <a href="#contact" class="btn btn-outline">
-
-                            ติดต่อฉัน
-
-                        </a>
-
-                    </div>
-
-
-                    <div class="social-links">
-
-                        <a href="#" aria-label="GitHub">
-
-                            <i class="fa-brands fa-github"></i>
-
-                        </a>
-
-                        <a href="#" aria-label="LinkedIn">
-
-                            <i class="fa-brands fa-linkedin-in"></i>
-
-                        </a>
-
-                        <a href="#" aria-label="Facebook">
-
-                            <i class="fa-brands fa-facebook-f"></i>
-
-                        </a>
-
-                        <a href="mailto:your@email.com" aria-label="Email">
-
-                            <i class="fa-solid fa-envelope"></i>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- รูปโปรไฟล์ -->
-
-                <div class="hero-image">
-
-                    <div class="image-decoration"></div>
-
-                    <div class="profile-wrapper">
-
-                        <img src="images/profile.jpg"
-                            alt="รูปโปรไฟล์ ณัฐวุฒิ คำมุข">
-
-                    </div>
-
-
-                    <div class="floating-card card-1">
-
-                        <i class="fa-solid fa-code"></i>
-
-                        <div>
-
-                            <strong>3+</strong>
-
-                            <span>ผลงาน</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="floating-card card-2">
-
-                        <i class="fa-solid fa-laptop-code"></i>
-
-                        <div>
-
-                            <strong>Web</strong>
-
-                            <span>นักพัฒนาเว็บไซต์</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="scroll-down">
-
-                <span>เลื่อนลง</span>
-
-                <i class="fa-solid fa-arrow-down"></i>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= ABOUT ================= -->
-
-        <section class="section" id="about">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <p>ทำความรู้จักกับฉัน</p>
-
-                    <h2>
-                        เกี่ยวกับ<span>ฉัน</span>
-                    </h2>
-
-                </div>
-
-
-                <div class="about-grid">
-
-                    <div class="about-text">
-
-                        <h3>
-
-                            สนใจเทคโนโลยี
-                            และการพัฒนาเว็บไซต์
-
-                        </h3>
-
-
-                        <p>
-
-                            สวัสดีครับ ผมชื่อ ณัฐวุฒิ คำมุข
-                            เป็นผู้ที่สนใจด้านการพัฒนาเว็บไซต์
-                            เทคโนโลยี และธุรกิจดิจิทัล
-
-                        </p>
-
-
-                        <p>
-
-                            ผมชอบเรียนรู้เทคโนโลยีใหม่ ๆ
-                            และนำความรู้มาสร้างเว็บไซต์
-                            และระบบที่สวยงาม ใช้งานง่าย
-                            และตอบโจทย์ผู้ใช้งาน
-
-                        </p>
-
-
-                        <div class="about-info">
-
-                            <div>
-
-                                <span>ชื่อ</span>
-
-                                <strong>
-                                    ณัฐวุฒิ คำมุข
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>ตำแหน่ง</span>
-
-                                <strong>
-                                    นักพัฒนาเว็บไซต์
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>สถานที่</span>
-
-                                <strong>
-                                    ประเทศไทย
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>อีเมล</span>
-
-                                <strong>
-                                    your@email.com
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="about-card">
-
-                        <div class="about-card-icon">
-
-                            <i class="fa-solid fa-laptop-code"></i>
-
-                        </div>
-
-
-                        <h3>
-                            สิ่งที่ฉันทำ
-                        </h3>
-
-
-                        <p>
-
-                            มุ่งเน้นการสร้างเว็บไซต์
-                            และเว็บแอปพลิเคชันที่ทันสมัย
-                            รองรับการใช้งานบนทุกอุปกรณ์
-
-                        </p>
-
-
-                        <div class="service-list">
-
-                            <div>
-
-                                <i class="fa-solid fa-check"></i>
-
-                                การพัฒนาเว็บไซต์ส่วนหน้า
-
-                            </div>
-
-
-                            <div>
-
-                                <i class="fa-solid fa-check"></i>
-
-                                การพัฒนาเว็บไซต์ส่วนหลัง
-
-                            </div>
-
-
-                            <div>
-
-                                <i class="fa-solid fa-check"></i>
-
-                                การออกแบบเว็บไซต์แบบ Responsive
-
-                            </div>
-
-
-                            <div>
-
-                                <i class="fa-solid fa-check"></i>
-
-                                การพัฒนาฐานข้อมูล
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= EDUCATION ================= -->
-
-        <section class="section section-gray" id="education">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <p>เส้นทางการศึกษา</p>
-
-                    <h2>
-                        การศึกษา
-                    </h2>
-
-                </div>
-
-
-                <div class="timeline">
-
-                    <div class="timeline-item">
-
-                        <div class="timeline-dot">
-
-                            <i class="fa-solid fa-graduation-cap"></i>
-
-                        </div>
-
-
-                        <div class="timeline-content">
-
-                            <span class="timeline-date">
-
-                                2566 - ปัจจุบัน
-
-                            </span>
-
-
-                            <h3>
-
-                                ระดับปริญญาตรี
-
-                            </h3>
-
-
-                            <h4>
-
-                                สาขาเทคโนโลยีธุรกิจดิจิทัล
-
-                            </h4>
-
-
-                            <p>
-
-                                ศึกษาด้านธุรกิจดิจิทัล
-                                การเขียนโปรแกรม
-                                ระบบฐานข้อมูล
-                                การพัฒนาเว็บไซต์
-                                และเทคโนโลยีสารสนเทศ
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="timeline-item">
-
-                        <div class="timeline-dot">
-
-                            <i class="fa-solid fa-school"></i>
-
-                        </div>
-
-
-                        <div class="timeline-content">
-
-                            <span class="timeline-date">
-
-                                การศึกษาก่อนระดับมหาวิทยาลัย
-
-                            </span>
-
-
-                            <h3>
-
-                                ระดับมัธยมศึกษา / อาชีวศึกษา
-
-                            </h3>
-
-
-                            <h4>
-
-                                คอมพิวเตอร์และเทคโนโลยี
-
-                            </h4>
-
-
-                            <p>
-
-                                เริ่มต้นความสนใจด้านคอมพิวเตอร์
-                                การเขียนโปรแกรม
-                                และเทคโนโลยีสารสนเทศ
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= SKILLS ================= -->
-
-        <section class="section" id="skills">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <p>ความสามารถของฉัน</p>
-
-                    <h2>
-                        ทักษะ<span>ของฉัน</span>
-                    </h2>
-
-                </div>
-
-
-                <div class="skills-grid">
-
-
-                    <div class="skill-card">
-
-                        <div class="skill-icon">
-
-                            <i class="fa-brands fa-html5"></i>
-
-                        </div>
-
-                        <h3>
-                            HTML
-                        </h3>
-
-                        <div class="skill-bar">
-
-                            <span style="width: 90%"></span>
-
-                        </div>
-
-                        <p>
-                            90%
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <div class="skill-icon">
-
-                            <i class="fa-brands fa-css3-alt"></i>
-
-                        </div>
-
-                        <h3>
-                            CSS
-                        </h3>
-
-                        <div class="skill-bar">
-
-                            <span style="width: 85%"></span>
-
-                        </div>
-
-                        <p>
-                            85%
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <div class="skill-icon">
-
-                            <i class="fa-brands fa-js"></i>
-
-                        </div>
-
-                        <h3>
-                            JavaScript
-                        </h3>
-
-                        <div class="skill-bar">
-
-                            <span style="width: 75%"></span>
-
-                        </div>
-
-                        <p>
-                            75%
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <div class="skill-icon">
-
-                            <i class="fa-brands fa-python"></i>
-
-                        </div>
-
-                        <h3>
-                            Python
-                        </h3>
-
-                        <div class="skill-bar">
-
-                            <span style="width: 80%"></span>
-
-                        </div>
-
-                        <p>
-                            80%
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <div class="skill-icon">
-
-                            <i class="fa-brands fa-react"></i>
-
-                        </div>
-
-                        <h3>
-                            React
-                        </h3>
-
-                        <div class="skill-bar">
-
-                            <span style="width: 65%"></span>
-
-                        </div>
-
-                        <p>
-                            65%
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <div class="skill-icon">
-
-                            <i class="fa-solid fa-database"></i>
-
-                        </div>
-
-                        <h3>
-                            ฐานข้อมูล
-                        </h3>
-
-                        <div class="skill-bar">
-
-                            <span style="width: 75%"></span>
-
-                        </div>
-
-                        <p>
-                            75%
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= PROJECTS ================= -->
-
-        <section class="section section-gray" id="projects">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <p>ผลงานของฉัน</p>
-
-                    <h2>
-                        ผลงาน<span>เด่น</span>
-                    </h2>
-
-                </div>
-
-
-                <div class="projects-grid">
-
-
-                    <!-- Project 1 -->
-
-                    <article class="project-card">
-
-                        <div class="project-image">
-
-                            <div class="project-number">
-                                01
-                            </div>
-
-                            <i class="fa-solid fa-dumbbell project-big-icon"></i>
-
-                        </div>
-
-
-                        <div class="project-content">
-
-                            <span class="project-category">
-
-                                เว็บแอปพลิเคชัน
-
-                            </span>
-
-
-                            <h3>
-                                ArticleHub
-                            </h3>
-
-
-                            <p>
-
-                                เว็บไซต์รวบรวมและแบ่งปัน
-                                ความรู้เกี่ยวกับการออกกำลังกาย
-                                และโภชนาการ
-
-                            </p>
-
-
-                            <div class="project-tech">
-
-                                <span>Flask</span>
-                                <span>Python</span>
-                                <span>SQLite</span>
-                                <span>Bootstrap</span>
-
-                            </div>
-
-
-                            <a href="#" class="project-link">
-
-                                ดูรายละเอียดผลงาน
-
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Project 2 -->
-
-                    <article class="project-card">
-
-                        <div class="project-image project-image-2">
-
-                            <div class="project-number">
-                                02
-                            </div>
-
-                            <i class="fa-solid fa-cart-shopping project-big-icon"></i>
-
-                        </div>
-
-
-                        <div class="project-content">
-
-                            <span class="project-category">
-
-                                เว็บไซต์ร้านค้า
-
-                            </span>
-
-
-                            <h3>
-                                ระบบร้านค้าออนไลน์
-                            </h3>
-
-
-                            <p>
-
-                                เว็บไซต์ร้านค้าออนไลน์
-                                สำหรับจัดแสดงสินค้า
-                                และจัดการข้อมูลสินค้า
-
-                            </p>
-
-
-                            <div class="project-tech">
-
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-
-                            </div>
-
-
-                            <a href="#" class="project-link">
-
-                                ดูรายละเอียดผลงาน
-
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Project 3 -->
-
-                    <article class="project-card">
-
-                        <div class="project-image project-image-3">
-
-                            <div class="project-number">
-                                03
-                            </div>
-
-                            <i class="fa-solid fa-comments project-big-icon"></i>
-
-                        </div>
-
-
-                        <div class="project-content">
-
-                            <span class="project-category">
-
-                                เว็บแอปพลิเคชัน
-
-                            </span>
-
-
-                            <h3>
-                                ระบบแชต
-                            </h3>
-
-
-                            <p>
-
-                                ระบบสนทนาผ่านเว็บไซต์
-                                สำหรับรับส่งข้อความ
-                                ระหว่างผู้ใช้งาน
-
-                            </p>
-
-
-                            <div class="project-tech">
-
-                                <span>Flask</span>
-                                <span>Python</span>
-                                <span>JavaScript</span>
-
-                            </div>
-
-
-                            <a href="#" class="project-link">
-
-                                ดูรายละเอียดผลงาน
-
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= EXPERIENCE ================= -->
-
-        <section class="section" id="experience">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <p>ประสบการณ์ของฉัน</p>
-
-                    <h2>
-                        ประสบการณ์
-                    </h2>
-
-                </div>
-
-
-                <div class="experience-card">
-
-                    <div class="experience-icon">
-
-                        <i class="fa-solid fa-code"></i>
-
-                    </div>
-
-
-                    <div class="experience-content">
-
-                        <span>
-                            การทำโปรเจกต์ส่วนตัว
-                        </span>
-
-
-                        <h3>
-                            นักพัฒนาเว็บไซต์
-                        </h3>
-
-
-                        <p>
-
-                            ออกแบบและพัฒนาเว็บไซต์
-                            และเว็บแอปพลิเคชันด้วย HTML,
-                            CSS, JavaScript, Python และ Flask
-                            รวมถึงการจัดการฐานข้อมูล
-                            ระบบสมาชิก และการออกแบบเว็บไซต์
-                            ให้รองรับอุปกรณ์ต่าง ๆ
-
-                        </p>
-
-
-                        <ul>
-
-                            <li>
-
-                                <i class="fa-solid fa-check"></i>
-
-                                พัฒนาเว็บไซต์แบบ Responsive
-
-                            </li>
-
-
-                            <li>
-
-                                <i class="fa-solid fa-check"></i>
-
-                                พัฒนาเว็บแอปพลิเคชันด้วย Flask
-
-                            </li>
-
-
-                            <li>
-
-                                <i class="fa-solid fa-check"></i>
-
-                                ออกแบบและจัดการฐานข้อมูล
-
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= CONTACT ================= -->
-
-        <section class="section contact-section" id="contact">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <p>ติดต่อฉัน</p>
-
-                    <h2>
-                        ติดต่อ<span>ฉัน</span>
-                    </h2>
-
-                </div>
-
-
-                <div class="contact-grid">
-
-
-                    <div class="contact-info">
-
-                        <h3>
-
-                            มาร่วมสร้างสิ่งดี ๆ
-                            ไปด้วยกัน
-
-                        </h3>
-
-
-                        <p>
-
-                            หากมีโครงการ
-                            โอกาสในการทำงาน
-                            หรืออยากพูดคุย
-                            สามารถติดต่อผมได้
-
-                        </p>
-
-
-                        <div class="contact-item">
-
-                            <div class="contact-icon">
-
-                                <i class="fa-solid fa-envelope"></i>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    อีเมล
-                                </span>
-
-                                <strong>
-                                    your@email.com
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="contact-item">
-
-                            <div class="contact-icon">
-
-                                <i class="fa-solid fa-location-dot"></i>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    สถานที่
-                                </span>
-
-                                <strong>
-                                    ประเทศไทย
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="contact-item">
-
-                            <div class="contact-icon">
-
-                                <i class="fa-brands fa-github"></i>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    GitHub
-                                </span>
-
-                                <strong>
-                                    github.com/yourusername
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Contact Form -->
-
-                    <form class="contact-form" id="contactForm">
-
-
-                        <div class="form-row">
-
-                            <div class="form-group">
-
-                                <label for="name">
-                                    ชื่อ
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="name"
-                                    placeholder="กรอกชื่อของคุณ"
-                                    required>
-
-                            </div>
-
-
-                            <div class="form-group">
-
-                                <label for="email">
-                                    อีเมล
-                                </label>
-
-                                <input
-                                    type="email"
-                                    id="email"
-                                    placeholder="กรอกอีเมลของคุณ"
-                                    required>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="subject">
-                                หัวข้อ
-                            </label>
-
-                            <input
-                                type="text"
-                                id="subject"
-                                placeholder="หัวข้อที่ต้องการติดต่อ"
-                                required>
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="message">
-                                ข้อความ
-                            </label>
-
-                            <textarea
-                                id="message"
-                                rows="6"
-                                placeholder="เขียนข้อความของคุณ..."
-                                required></textarea>
-
-                        </div>
-
-
-                        <button type="submit" class="btn btn-primary">
-
-                            ส่งข้อความ
-
-                            <i class="fa-solid fa-paper-plane"></i>
-
-                        </button>
-
-                    </form>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <div class="container footer-container">
-
-            <a href="#home" class="logo">
-                NK
-            </a>
-
-
-            <p>
-                © 2026 ณัฐวุฒิ คำมุข สงวนลิขสิทธิ์
+            <p class="hello">
+                <span></span>
+                สวัสดีครับ ผม
             </p>
 
+            <h1>
+                ณัฐวุฒิ
+                <strong>คำมุข</strong>
+            </h1>
 
-            <div class="footer-social">
+            <h2>
+                นักพัฒนาเว็บไซต์
+            </h2>
+
+            <p class="hero-description">
+                นักศึกษาที่มีความสนใจด้านเทคโนโลยี
+                การพัฒนาเว็บไซต์ และธุรกิจดิจิทัล
+                ชอบเรียนรู้สิ่งใหม่ ๆ และนำความรู้
+                มาสร้างผลงานที่สามารถใช้งานได้จริง
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn primary-btn">
+                    ดูผลงาน
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#contact" class="btn outline-btn">
+                    ติดต่อฉัน
+                </a>
+
+            </div>
+
+            <div class="social">
 
                 <a href="#">
-
                     <i class="fa-brands fa-github"></i>
-
                 </a>
 
                 <a href="#">
-
-                    <i class="fa-brands fa-linkedin-in"></i>
-
+                    <i class="fa-brands fa-facebook"></i>
                 </a>
 
-                <a href="#">
-
-                    <i class="fa-brands fa-facebook-f"></i>
-
+                <a href="mailto:your@email.com">
+                    <i class="fa-solid fa-envelope"></i>
                 </a>
 
             </div>
 
         </div>
 
-    </footer>
+
+        <!-- รูปโปรไฟล์ -->
+
+        <div class="hero-photo">
+
+            <div class="circle-bg"></div>
+
+            <div class="photo-box">
+
+                <img src="images/profile.jpg"
+                     alt="ณัฐวุฒิ คำมุข">
+
+            </div>
+
+            <div class="photo-card card-top">
+
+                <i class="fa-solid fa-code"></i>
+
+                <div>
+                    <strong>Web</strong>
+                    <span>Developer</span>
+                </div>
+
+            </div>
+
+            <div class="photo-card card-bottom">
+
+                <i class="fa-solid fa-laptop-code"></i>
+
+                <div>
+                    <strong>สร้างสรรค์</strong>
+                    <span>เรียนรู้สิ่งใหม่</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="scroll">
+        <i class="fa-solid fa-chevron-down"></i>
+    </div>
+
+</section>
 
 
-    <!-- ปุ่มกลับขึ้นด้านบน -->
+<!-- ================= ABOUT ================= -->
 
-    <button class="back-top" id="backTop">
+<section id="about" class="section">
 
-        <i class="fa-solid fa-arrow-up"></i>
+    <div class="container">
 
-    </button>
+        <div class="section-heading">
+
+            <span>ABOUT ME</span>
+
+            <h2>เกี่ยวกับ<span>ฉัน</span></h2>
+
+            <p>
+                ทำความรู้จักกับตัวผมมากขึ้น
+            </p>
+
+        </div>
 
 
-    <script src="script.js"></script>
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <h3>
+                    ผมสนใจการสร้างเว็บไซต์
+                    และเทคโนโลยีดิจิทัล
+                </h3>
+
+                <p>
+                    ผมชื่อ <strong>ณัฐวุฒิ คำมุข</strong>
+                    เป็นนักศึกษาที่สนใจด้านเทคโนโลยี
+                    การเขียนโปรแกรม และการพัฒนาเว็บไซต์
+                </p>
+
+                <p>
+                    ผมชอบเรียนรู้เทคโนโลยีใหม่ ๆ
+                    และนำความรู้ที่ได้มาพัฒนาเป็นโปรเจกต์
+                    เพื่อเพิ่มประสบการณ์และพัฒนาทักษะของตัวเอง
+                </p>
+
+                <div class="info-grid">
+
+                    <div>
+                        <span>ชื่อ</span>
+                        <strong>ณัฐวุฒิ คำมุข</strong>
+                    </div>
+
+                    <div>
+                        <span>อาชีพ</span>
+                        <strong>นักศึกษา</strong>
+                    </div>
+
+                    <div>
+                        <span>ความสนใจ</span>
+                        <strong>Web Development</strong>
+                    </div>
+
+                    <div>
+                        <span>ประเทศ</span>
+                        <strong>ประเทศไทย</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <div class="about-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+
+                <h3>สิ่งที่ฉันสนใจ</h3>
+
+                <div class="interest">
+
+                    <div>
+                        <i class="fa-solid fa-globe"></i>
+                        <span>การพัฒนาเว็บไซต์</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <span>การเขียนโปรแกรม</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-database"></i>
+                        <span>ฐานข้อมูล</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <span>เทคโนโลยีดิจิทัล</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section id="education" class="section light-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>EDUCATION</span>
+
+            <h2>การ<span>ศึกษา</span></h2>
+
+            <p>
+                เส้นทางการเรียนรู้ของฉัน
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div class="timeline-content">
+
+                    <span class="date">
+                        ปัจจุบัน
+                    </span>
+
+                    <h3>
+                        ระดับปริญญาตรี
+                    </h3>
+
+                    <h4>
+                        สาขาเทคโนโลยีธุรกิจดิจิทัล
+                    </h4>
+
+                    <p>
+                        ศึกษาด้านเทคโนโลยีดิจิทัล
+                        การเขียนโปรแกรม
+                        การพัฒนาเว็บไซต์
+                        ฐานข้อมูล และระบบสารสนเทศ
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-school"></i>
+                </div>
+
+                <div class="timeline-content">
+
+                    <span class="date">
+                        การศึกษาก่อนระดับมหาวิทยาลัย
+                    </span>
+
+                    <h3>
+                        ระดับมัธยมศึกษา / อาชีวศึกษา
+                    </h3>
+
+                    <h4>
+                        คอมพิวเตอร์และเทคโนโลยี
+                    </h4>
+
+                    <p>
+                        เริ่มต้นเรียนรู้เกี่ยวกับคอมพิวเตอร์
+                        เทคโนโลยี และพื้นฐานการเขียนโปรแกรม
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills" class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>MY SKILLS</span>
+
+            <h2>ทักษะ<span>ของฉัน</span></h2>
+
+            <p>
+                เทคโนโลยีที่ฉันกำลังเรียนรู้และพัฒนา
+            </p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <i class="fa-brands fa-html5"></i>
+
+                <h3>HTML</h3>
+
+                <p>โครงสร้างเว็บไซต์</p>
+
+                <div class="skill-line">
+                    <span style="width:90%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <i class="fa-brands fa-css3-alt"></i>
+
+                <h3>CSS</h3>
+
+                <p>ออกแบบและตกแต่งเว็บไซต์</p>
+
+                <div class="skill-line">
+                    <span style="width:85%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <i class="fa-brands fa-js"></i>
+
+                <h3>JavaScript</h3>
+
+                <p>เพิ่มความสามารถให้เว็บไซต์</p>
+
+                <div class="skill-line">
+                    <span style="width:75%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <i class="fa-brands fa-python"></i>
+
+                <h3>Python</h3>
+
+                <p>การเขียนโปรแกรมและ Backend</p>
+
+                <div class="skill-line">
+                    <span style="width:80%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <i class="fa-brands fa-react"></i>
+
+                <h3>React</h3>
+
+                <p>การพัฒนาเว็บไซต์แบบ Component</p>
+
+                <div class="skill-line">
+                    <span style="width:65%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <i class="fa-solid fa-database"></i>
+
+                <h3>ฐานข้อมูล</h3>
+
+                <p>การจัดเก็บและจัดการข้อมูล</p>
+
+                <div class="skill-line">
+                    <span style="width:75%"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects" class="section light-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>MY PROJECTS</span>
+
+            <h2>ผลงาน<span>ของฉัน</span></h2>
+
+            <p>
+                ตัวอย่างโปรเจกต์ที่ฉันได้พัฒนา
+            </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <article class="project-card">
+
+                <div class="project-top">
+
+                    <span>01</span>
+
+                    <i class="fa-solid fa-dumbbell"></i>
+
+                </div>
+
+                <div class="project-body">
+
+                    <small>เว็บแอปพลิเคชัน</small>
+
+                    <h3>ArticleHub</h3>
+
+                    <p>
+                        เว็บไซต์รวบรวมบทความเกี่ยวกับ
+                        การออกกำลังกายและโภชนาการ
+                    </p>
+
+                    <div class="tags">
+                        <span>Flask</span>
+                        <span>Python</span>
+                        <span>SQLite</span>
+                        <span>Bootstrap</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-top">
+
+                    <span>02</span>
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </div>
+
+                <div class="project-body">
+
+                    <small>เว็บไซต์</small>
+
+                    <h3>ระบบร้านค้าออนไลน์</h3>
+
+                    <p>
+                        เว็บไซต์สำหรับแสดงสินค้า
+                        และจัดการข้อมูลร้านค้าออนไลน์
+                    </p>
+
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-top">
+
+                    <span>03</span>
+
+                    <i class="fa-solid fa-comments"></i>
+
+                </div>
+
+                <div class="project-body">
+
+                    <small>เว็บแอปพลิเคชัน</small>
+
+                    <h3>ระบบแชต</h3>
+
+                    <p>
+                        ระบบสนทนาสำหรับรับส่งข้อความ
+                        ระหว่างผู้ใช้งานผ่านเว็บไซต์
+                    </p>
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="section contact-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>CONTACT</span>
+
+            <h2>ติดต่อ<span>ฉัน</span></h2>
+
+            <p>
+                สามารถติดต่อฉันได้ตามช่องทางด้านล่าง
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-info">
+
+                <h3>
+                    มาพูดคุยกัน
+                </h3>
+
+                <p>
+                    หากต้องการติดต่อสอบถาม
+                    หรือพูดคุยเกี่ยวกับโปรเจกต์
+                    สามารถติดต่อได้ตามช่องทางต่าง ๆ
+                </p>
+
+
+                <div class="contact-item">
+
+                    <div>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <span>อีเมล</span>
+
+                    <strong>your@email.com</strong>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div>
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <span>สถานที่</span>
+
+                    <strong>ประเทศไทย</strong>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+
+                    <span>GitHub</span>
+
+                    <strong>github.com/yourusername</strong>
+
+                </div>
+
+            </div>
+
+
+            <form id="contactForm">
+
+                <div class="form-group">
+
+                    <label>ชื่อ</label>
+
+                    <input
+                        type="text"
+                        placeholder="กรอกชื่อของคุณ"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>อีเมล</label>
+
+                    <input
+                        type="email"
+                        placeholder="กรอกอีเมลของคุณ"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>ข้อความ</label>
+
+                    <textarea
+                        rows="6"
+                        placeholder="เขียนข้อความ..."
+                        required></textarea>
+
+                </div>
+
+
+                <button class="btn primary-btn" type="submit">
+
+                    ส่งข้อความ
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container footer-container">
+
+        <div class="footer-logo">
+            <span>N</span>K
+        </div>
+
+        <p>
+            © 2026 ณัฐวุฒิ คำมุข
+        </p>
+
+        <div class="footer-social">
+
+            <a href="#">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<button id="backTop" class="back-top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
-```

@@ -1,17 +1,17 @@
-/* =========================
-   MOBILE MENU
-========================= */
+// ========================================
+// เมนูมือถือ
+// ========================================
 
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 
 menuBtn.addEventListener("click", () => {
 
-    navMenu.classList.toggle("open");
+    navMenu.classList.toggle("show");
 
     const icon = menuBtn.querySelector("i");
 
-    if (navMenu.classList.contains("open")) {
+    if (navMenu.classList.contains("show")) {
         icon.classList.remove("fa-bars");
         icon.classList.add("fa-xmark");
     } else {
@@ -22,9 +22,9 @@ menuBtn.addEventListener("click", () => {
 });
 
 
-/* =========================
-   CLOSE MOBILE MENU
-========================= */
+// ========================================
+// ปิดเมนูเมื่อกดลิงก์
+// ========================================
 
 const navLinks = document.querySelectorAll(".nav-link");
 
@@ -32,7 +32,7 @@ navLinks.forEach(link => {
 
     link.addEventListener("click", () => {
 
-        navMenu.classList.remove("open");
+        navMenu.classList.remove("show");
 
         const icon = menuBtn.querySelector("i");
 
@@ -44,9 +44,46 @@ navLinks.forEach(link => {
 });
 
 
-/* =========================
-   DARK MODE
-========================= */
+// ========================================
+// Active Menu
+// ========================================
+
+window.addEventListener("scroll", () => {
+
+    const sections = document.querySelectorAll("section");
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+
+    });
+
+});
+
+
+// ========================================
+// Dark Mode
+// ========================================
 
 const themeBtn = document.getElementById("themeBtn");
 
@@ -75,13 +112,11 @@ themeBtn.addEventListener("click", () => {
 });
 
 
-/* =========================
-   LOAD SAVED THEME
-========================= */
+// ========================================
+// จำค่า Theme
+// ========================================
 
-const savedTheme = localStorage.getItem("theme");
-
-if (savedTheme === "dark") {
+if (localStorage.getItem("theme") === "dark") {
 
     document.body.classList.add("dark");
 
@@ -93,46 +128,9 @@ if (savedTheme === "dark") {
 }
 
 
-/* =========================
-   ACTIVE NAVIGATION
-========================= */
-
-const sections = document.querySelectorAll("section[id]");
-
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach(section => {
-
-        const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
-
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
-        ) {
-            current = section.getAttribute("id");
-        }
-
-    });
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-        }
-
-    });
-
-});
-
-
-/* =========================
-   BACK TO TOP
-========================= */
+// ========================================
+// ปุ่มกลับด้านบน
+// ========================================
 
 const backTop = document.getElementById("backTop");
 
@@ -156,49 +154,9 @@ backTop.addEventListener("click", () => {
 });
 
 
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-const revealElements = document.querySelectorAll(
-    ".section-title, .about-grid, .timeline-item, .skill-card, .project-card, .experience-card, .contact-grid"
-);
-
-revealElements.forEach(element => {
-    element.classList.add("reveal");
-});
-
-
-const observer = new IntersectionObserver(
-    (entries, observer) => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("show");
-
-                observer.unobserve(entry.target);
-
-            }
-
-        });
-
-    },
-    {
-        threshold: 0.15
-    }
-);
-
-
-revealElements.forEach(element => {
-    observer.observe(element);
-});
-
-
-/* =========================
-   CONTACT FORM
-========================= */
+// ========================================
+// Contact Form
+// ========================================
 
 const contactForm = document.getElementById("contactForm");
 
@@ -206,11 +164,7 @@ contactForm.addEventListener("submit", (event) => {
 
     event.preventDefault();
 
-    const name = document.getElementById("name").value;
-
-    alert(
-        `Thank you, ${name}! Your message has been received.`
-    );
+    alert("ส่งข้อความเรียบร้อยแล้วครับ");
 
     contactForm.reset();
 
